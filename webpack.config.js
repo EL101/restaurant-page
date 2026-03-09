@@ -17,7 +17,7 @@ export default {
     module: {
         rules: [
             {
-                test: /\.ts$/,
+                test: /\.ts$/i,
                 use: ["ts-loader"],
                 exclude: /node_modules/
             },
@@ -28,6 +28,10 @@ export default {
             {
                 test: /\.html$/i,
                 use: ["html-loader"]
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif|)$/i,
+                type: "asset/resource"
             }
         ]
     }
