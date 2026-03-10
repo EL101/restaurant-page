@@ -9,6 +9,16 @@ nav {
     justify-content: center;
 }
 
+.nav-button {
+    padding: 1rem 2rem;
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+    border: 1px solid gray;
+    font-size: 1rem;
+    background-color: #378ddd;
+    color: #ae0305;
+    font-weight: 700;
+}
 #content {
     display: flex;
     flex-direction: column;
@@ -16,6 +26,11 @@ nav {
     border: 1px solid red;
 }
 
+.highlights-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .highlights {
     display: flex;
     gap: 2rem;
@@ -25,4 +40,10 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.highlight-item > img {
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
 }

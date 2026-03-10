@@ -15,6 +15,13 @@ function writeHomepage() {
     description.textContent = "Yummy yummy shrimp, crab, lobster, shark, whale, beluga, lanternfish, squid, octopus, jellyfish"
     description.classList.add("description");
 
+    const highlightsSection = document.createElement("div");
+    highlightsSection.classList.add("highlights-section");
+    
+    const highlightTitle = document.createElement("h2");
+    highlightTitle.classList.add("highlight-title")
+    highlightTitle.textContent = "Menu Highlights";
+
     const highlights = document.createElement("div");
     highlights.classList.add("highlights");
     const highlightItems: menuItem[] = [
@@ -35,6 +42,8 @@ function writeHomepage() {
         itemElem.append(name, img, price);
         highlights.append(itemElem);
     }
+    highlightsSection.append(highlightTitle, highlights);
+
     const hours = document.createElement("div");
     hours.classList.add("hours");
     const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Sturday", "Sunday"]
@@ -45,7 +54,7 @@ function writeHomepage() {
         time.textContent = days[i] + ": " + times[i];
         hours.append(time);
     }
-    homepage?.append(title,description,highlights,hours);
+    homepage?.append(title,description,highlightsSection,hours);
 }
 
 writeHomepage();
