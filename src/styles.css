@@ -5,19 +5,35 @@
 }
 :root {
     /* pallete: https://www.figma.com/color-palettes/mermaid-garnet-symphony/ */
-    --light-red: #C33F45;
+    /* --light-red: #C33F45;
     --dark-red: #95292D;
     --light-blue: #A3D9D9;
     --beige: #E2B0A5;
     --yellow: #D89F58;
     --dark-blue: #1A3567;
 
-    --text-font-size: 1.3rem;
+    --text-font-size: 1.3rem; */
+    /* Backgrounds */
+  --bg-deep:     #0D1B2A;   /* Deep ocean — main page background */
+  --bg-surface:  #112240;   /* Slightly lighter navy — cards, sections */
+  --bg-warm:     #1A2E3B;   /* Warm-tinted navy — alternating sections */
+
+  /* Accent / Brand */
+  --accent-amber:  #E8A838;  /* Warm amber — prices, CTAs, highlights */
+  --accent-teal:   #2EC4B6;  /* Ocean teal — links, hover states */
+
+  /* Text */
+  --text-primary:  #F4EBD0;  /* Warm cream — headings, main text */
+  --text-muted:    #8DA9C4;  /* Steel blue-grey — subtext, hours */
+
+  /* Borders / Dividers */
+  --border:        #1E3A5F;  /* Subtle navy border */
 }
-body {
-    background-color: var(--light-blue);
-    /* font-size: var(--text-font-size); */
+
+body, #content {
+    background-color: var(--bg-deep);
 }
+
 nav {
     display: flex;
     justify-content: center;
@@ -26,18 +42,30 @@ nav {
 .nav-button {
     padding: 1rem 2rem;
     border-radius: 10px 10px 0 0;
-    border: 2px solid var(--dark-red);
+    border: 1px solid var(--border);
     border-bottom: none;
-    font-size: 1rem;
-    background-color: var(--light-red);
-    color: var(--beige);
-    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    background-color: var(--bg-surface);
+    color: var(--text-muted);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 .nav-button:hover {
-    cursor: pointer;
-    background-color: var(--dark-red);
+  background-color: var(--bg-warm);
+  color: var(--text-primary);
 }
+
+.nav-button.active {
+  background-color: var(--bg-deep);
+  color: var(--accent-amber);
+  border-color: var(--border);
+  border-bottom: 1px solid var(--bg-deep); /* "merges" into the page */
+}
+
 #content {
     display: flex;
     flex-direction: column;
@@ -47,13 +75,18 @@ nav {
     color: #176571;
     margin: auto;
     width: clamp(750px, 60%, 900px);
+    box-shadow: 0 0 10px 5px rgba(128, 128, 128, 0.31);
 }
 
-.title, .highlight-title, .highlight-item > h3 {
-    color: var(--dark-blue);
+.title {
+    color: var(--text-primary);
+}
+.description {
+    color: var(--text-muted);
 }
 .highlight-title {
     font-size: 1.7rem;
+    color: var(--text-primary);
 }
 
 .title {
@@ -62,9 +95,10 @@ nav {
 
 .highlight-item > h3 {
     font-size: 1.5rem;
+    color: var(--accent-teal);
 }
 .highlight-item > p {
-    color: var(--dark-red);
+    color: var(--accent-amber);
     font-weight: 600;
     font-size: 1.2rem;
 }
@@ -72,6 +106,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--bg-surface);
 }
 .highlights {
     display: flex;
@@ -82,6 +117,12 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--bg-warm);
+    border: var(--border);
+}
+
+.hours {
+    background-color: var(--bg-surface);
 }
 
 .highlight-item > img {
@@ -93,7 +134,12 @@ nav {
 .hours-entry {
     font-size: 1.2rem;
 }
+
 .hours-entry > span:first-child {
-    color: var(--dark-blue);
+    color: var(--text-primary);
     font-weight: 600;
+}
+
+.hours-entry > span:last-child {
+    color: var(--text-muted);
 }

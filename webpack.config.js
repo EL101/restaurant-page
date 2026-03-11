@@ -14,6 +14,9 @@ export default {
         template: "./src/template.html",
         }),
     ],
+    resolve: {
+        extensions: ['.ts', '.js']
+    },
     module: {
         rules: [
             {
