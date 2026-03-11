@@ -17,7 +17,7 @@ function writeHomepage() {
 
     const highlightsSection = document.createElement("div");
     highlightsSection.classList.add("highlights-section");
-    
+
     const highlightTitle = document.createElement("h2");
     highlightTitle.classList.add("highlight-title")
     highlightTitle.textContent = "Menu Highlights";
@@ -49,10 +49,14 @@ function writeHomepage() {
     const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Sturday", "Sunday"]
     const times = ["9:00am - 9:00pm","9:00am - 9:00pm","10:00am - 7:00pm","9:00am - 9:00pm","9:00am - 12:00am","11:00am - 5:00pm","Closed"]
     for (let i = 0; i < 7; i++) {
-        const time = document.createElement("p");
-        time.classList.add("time");
-        time.textContent = days[i] + ": " + times[i];
-        hours.append(time);
+        const hoursEntry = document.createElement("p");
+        hoursEntry.classList.add("hours-entry");
+        const day = document.createElement("span");
+        day.textContent = days[i] + ": ";
+        const time = document.createElement("span");        
+        time.textContent = times[i];
+        hoursEntry.append(day, time);
+        hours.append(hoursEntry);
     }
     homepage?.append(title,description,highlightsSection,hours);
 }

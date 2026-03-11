@@ -3,7 +3,21 @@
     padding: none;
     box-sizing: border-box;
 }
+:root {
+    /* pallete: https://www.figma.com/color-palettes/mermaid-garnet-symphony/ */
+    --light-red: #C33F45;
+    --dark-red: #95292D;
+    --light-blue: #A3D9D9;
+    --beige: #E2B0A5;
+    --yellow: #D89F58;
+    --dark-blue: #1A3567;
 
+    --text-font-size: 1.3rem;
+}
+body {
+    background-color: var(--light-blue);
+    /* font-size: var(--text-font-size); */
+}
 nav {
     display: flex;
     justify-content: center;
@@ -12,20 +26,48 @@ nav {
 .nav-button {
     padding: 1rem 2rem;
     border-radius: 10px 10px 0 0;
+    border: 2px solid var(--dark-red);
     border-bottom: none;
-    border: 1px solid gray;
     font-size: 1rem;
-    background-color: #378ddd;
-    color: #ae0305;
+    background-color: var(--light-red);
+    color: var(--beige);
     font-weight: 700;
+}
+
+.nav-button:hover {
+    cursor: pointer;
+    background-color: var(--dark-red);
 }
 #content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid red;
+    border: 2px solid var(--dark-red);
+    background-color: var(--yellow);
+    color: #176571;
+    margin: auto;
+    width: clamp(750px, 60%, 900px);
 }
 
+.title, .highlight-title, .highlight-item > h3 {
+    color: var(--dark-blue);
+}
+.highlight-title {
+    font-size: 1.7rem;
+}
+
+.title {
+    font-size: 2.5rem;
+}
+
+.highlight-item > h3 {
+    font-size: 1.5rem;
+}
+.highlight-item > p {
+    color: var(--dark-red);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
 .highlights-section {
     display: flex;
     flex-direction: column;
@@ -46,4 +88,12 @@ nav {
     height: 300px;
     object-fit: cover;
     object-position: center;
+}
+
+.hours-entry {
+    font-size: 1.2rem;
+}
+.hours-entry > span:first-child {
+    color: var(--dark-blue);
+    font-weight: 600;
 }
