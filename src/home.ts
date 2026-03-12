@@ -45,6 +45,10 @@ function writeHomePage() {
 
     const hours = document.createElement("div");
     hours.classList.add("hours");
+    const hoursTitle = document.createElement("h2");
+    hoursTitle.textContent = "Hours";
+    hoursTitle.classList.add("hours-title");
+    hours.append(hoursTitle);
     const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Sturday", "Sunday"]
     const times = ["9:00am - 9:00pm","9:00am - 9:00pm","10:00am - 7:00pm","9:00am - 9:00pm","9:00am - 12:00am","11:00am - 5:00pm","Closed"]
     for (let i = 0; i < 7; i++) {
