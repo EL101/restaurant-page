@@ -71,8 +71,7 @@ nav {
     margin: auto;
     width: clamp(750px, 60%, 900px);
     box-shadow: 0 0 10px 5px rgba(128, 128, 128, 0.31);
-    padding-top: 1rem;
-    padding-bottom: 2rem;
+    padding: 1rem 1rem 2rem 1rem;
 }
 
 .title {
@@ -185,3 +184,21 @@ nav {
 .hours-entry:hover {
   background-color: var(--bg-warm);
 }
+
+/* About */
+.about-section-title {
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    font-size: 1.6rem;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid var(--border); */
+    /* background-color: var(--bg-surface); */
+    padding: 1rem 2.5rem 2rem;
+}
+/* Our story */

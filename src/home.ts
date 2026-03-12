@@ -7,7 +7,7 @@ type menuItem = {img: string, name: string, price: number}
 
 function writeHomePage() {
     const title = document.createElement("h1");
-    title.textContent = "HELO";
+    title.textContent = "SEAFOOD PALACE";
     title.classList.add("title");
 
     const description = document.createElement("p");
