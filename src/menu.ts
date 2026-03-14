@@ -5,6 +5,11 @@ import salmonImg from "./img/salmon.jpg";
 import cheeseImg from "./img/cheese.jpg";
 import baugetteImg from "./img/baugette.jpg";
 import oysterImg from "./img/oyster.jpg";
+import lemoncakeImg from "./img/lemoncake.jpg";
+import tartImg from "./img/tart.jpg";
+import sorbetImg from "./img/sorbet.jpg";
+import iceteaImg from "./img/icetea.jpg";
+import lemonadeImg from "./img/lemonade.jpg";
 
 const homepage = document.getElementById("content");
 
@@ -57,8 +62,17 @@ function writeMenuPage() {
         {img: crabImg, name: "JUMBO crabs", price: 999.9},
         {img: salmonImg, name: "Buttery Salmon", price: 59.67}
     ];
-    const dessertItems:menuItem[] = [];
-    const drinkItems:menuItem[] = [];
+    const dessertItems:menuItem[] = [
+        {img: lemoncakeImg, name: "Soft lemon cake", price: 15.87},
+        {img: tartImg, name: "Tarty fruit tart", price: 9.12},
+        {img: sorbetImg, name: "Creamy cherry sorbet", price: 12.22}
+        
+    ];
+    const drinkItems:menuItem[] = [
+        {img: iceteaImg, name: "Sweet ice tea", price: 5.98},
+        {img: lemonadeImg, name: "Classic lemonade", price: 3.33},
+
+    ];
 
     const appetizers = createMenuSubsection("Appetizers", appetizerItems);
     const entrees = createMenuSubsection("Entrees", entreeItems);
