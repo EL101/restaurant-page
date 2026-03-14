@@ -1,6 +1,10 @@
 import shrimpImg from "./img/shrimp.png";
 import lobsterImg from "./img/lobster.png";
 import crabImg from "./img/crab.png";
+import salmonImg from "./img/salmon.jpg";
+import cheeseImg from "./img/cheese.jpg";
+import baugetteImg from "./img/baugette.jpg";
+import oysterImg from "./img/oyster.jpg";
 
 const homepage = document.getElementById("content");
 
@@ -39,11 +43,19 @@ function writeMenuPage() {
     const menuDisplay = document.createElement("div");
     menuDisplay.classList.add("menu-display");
 
-    const appetizerItems:menuItem[] = [];
-    const entreeItems:menuItem[] = [
+    const appetizerItems:menuItem[] = [
         {img: shrimpImg, name: "Infinite shrimp", price: 99.9},
+        {img: cheeseImg, name: "Cheesy cheese", price: 3.91},
+        {img: oysterImg, name: "Clammy oyster", price: 6.7},
+        {img: baugetteImg, name: "Le baugette", price: 8.88},
+
+
+    ];
+    const entreeItems:menuItem[] = [
+        
         {img: lobsterImg, name: "Juicy lobster", price: 199.9},
-        {img: crabImg, name: "JUMBO crabs", price: 999.9}
+        {img: crabImg, name: "JUMBO crabs", price: 999.9},
+        {img: salmonImg, name: "Buttery Salmon", price: 59.67}
     ];
     const dessertItems:menuItem[] = [];
     const drinkItems:menuItem[] = [];
