@@ -1,4 +1,4 @@
-**Restaurant Page**
+# Restaurant Page
 
 Built with Typescript + Webpack
 
